@@ -1,7 +1,7 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
-// إعداد شاشة LCD (عنوان 0x27 شائع، عدّل إذا كان مختلف)
+//LCD 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 // Pin Definitions
@@ -18,8 +18,8 @@ void setup() {
   Serial.begin(9600);
 
   // LCD Init
-  lcd.init();       // تهيئة الشاشة
-  lcd.backlight();  // تشغيل الإضاءة الخلفية
+  lcd.init();       
+  lcd.backlight();  //  
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("System Starting...");
